@@ -153,4 +153,7 @@ header p:nth-last-of-type(1){
         ;
         gap: 1.5rem;
         }
-    }
+    header p:nth-last-of-type(1){
+        padding: 0;
+        }
+}
