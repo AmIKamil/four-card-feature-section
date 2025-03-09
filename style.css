@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+--Grey-500: hsl(234, 12%, 34%);
+--Grey-400: hsl(212, 6%, 44%);
+--White: hsl(0, 0%, 100%);
+
+Font-size: 15px;
+color: var(--Grey-500);
+font-family: Poppins, sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 2rem;
+}
+
+.boxes{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    '. top. '
+    'left top right'
+    'left bottom right'
+    '. bottom .'
+    ;
+    gap: 1.5rem;
+    padding: 3rem;
+}
+
+main header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box{
+    display: grid;
+    padding: 1.5rem;
+    font-weight: 400;
+    border-radius: 0.3rem;
+    box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.15);
+    font-size: 0.95rem;
+    min-width: 17rem;
+    min-height: 12rem; /*210px*/
+}
+
+.box h2{
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.box p{
+    padding-bottom: 1.5rem;
+    font-size: 0.70rem;
+    line-height: 1rem;
+}
+
+.box img{
+    align-self: self-end;
+    justify-self: self-end;
+    width: 3rem;
+    height: auto;
+}
+
+.header{ 
+    width: 50rem;
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 2.8rem;
+   /* padding: 1rem 5rem;*/
+}
+
+header p:nth-last-of-type(1){
+    text-align: center;
+    font-size: 0.70rem;
+    padding: 0 9rem;
+    margin: 1rem 0;
+    line-height: 1.5rem;
+}
+
+.top{
+    grid-area: top;
+    border-top: 0.3rem solid var(--Red);
+}
+
+.left{
+    grid-area: left;
+    border-top: 0.3rem solid var(--Cyan);
+}
+
+.right{
+    grid-area: right;
+    border-top: 0.3rem solid var(--Blue);
+}
+
+.bottom{
+    grid-area: bottom;
+    border-top: 0.3rem solid var(--Orange);
+}
+
+@media screen and (max-width: 810px){
+.boxes{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    'top left'
+    'bottom right'
+    ;
+    gap: 1.5rem;
+    padding: 3rem;
+    }
+}
+
+@media screen and (max-width: 545px){
+    main{
+        padding: 0;
+    }
+    
+    main .header{
+        padding: 1rem
+    }
+    .boxes{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        'top left'
+        'bottom right'
+        ;
+        gap: 1.5rem;
+        }
+    }
