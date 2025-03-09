@@ -139,7 +139,9 @@ header p:nth-last-of-type(1){
     }
     
     main .header{
-        padding: 1rem
+        padding: 1rem;
+        justify-content: center;
+        text-align: center;
     }
     .boxes{
         justify-content: center;
