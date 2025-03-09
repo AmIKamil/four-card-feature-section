@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 :root{
@@ -22,12 +23,14 @@ main{
     flex-direction: column;
     align-items: center;
     padding: 2rem 2rem;
+    max-width: fit-content;
+    margin: 0 auto;
 }
 
 .boxes{
     justify-content: center;
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-template-columns: 0repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     '. top. '
@@ -52,8 +55,8 @@ main header{
     border-radius: 0.3rem;
     box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.15);
     font-size: 0.95rem;
-    min-width: 17rem;
-    min-height: 12rem; /*210px*/
+    width: 17rem;
+    height: 12rem; /*210px*/
 }
 
 .box h2{
@@ -76,7 +79,8 @@ main header{
 }
 
 .header{ 
-    width: 50rem;
+    width: 100%;
+    max-width: max-content;
     font-size: 2rem;
     font-weight: 200;
     line-height: 2.8rem;
@@ -115,18 +119,18 @@ header p:nth-last-of-type(1){
 .boxes{
     justify-content: center;
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     'top left'
     'bottom right'
     ;
-    gap: 1.5rem;
+    gap: 1rem;
     padding: 3rem;
     }
 }
 
-@media screen and (max-width: 545px){
+@media screen and (max-width: 585px){
     main{
         display: flex;
         flex-direction: column;
