@@ -115,7 +115,7 @@ header p:nth-last-of-type(1){
     border-top: 0.3rem solid var(--Orange);
 }
 
-@media screen and (max-width: 810px){
+@media screen and (max-width: 768px){
 .boxes{
     justify-content: center;
     display: grid;
@@ -130,7 +130,7 @@ header p:nth-last-of-type(1){
     }
 }
 
-@media screen and (max-width: 585px){
+@media screen and (max-width: 550px){
     main{
         display: flex;
         flex-direction: column;
